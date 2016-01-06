@@ -25,44 +25,44 @@
 
 			files: {
 				highcharts: {
-					JQUERY: 'jquery.1.9.1.min.js',
-					HIGHCHARTS: 'highcharts.js',
-					HIGHCHARTS_MORE: 'highcharts-more.js',
-					HIGHCHARTS_DATA: 'data.js',
-					HIGHCHARTS_DRILLDOWN: 'drilldown.js',
-					HIGHCHARTS_FUNNEL: 'funnel.js',
-					HIGHCHARTS_HEATMAP: 'heatmap.js',
-					HIGHCHARTS_TREEMAP: 'treemap.js',
-					HIGHCHARTS_3D: 'highcharts-3d.js',
-					HIGHCHARTS_NODATA: 'no-data-to-display.js',
+					JQUERY: '../../jquery/dist/jquery.min.js',
+					HIGHCHARTS: '../../highcharts-release/highcharts.js',
+					HIGHCHARTS_MORE: '../../highcharts-release/highcharts-more.js',
+					HIGHCHARTS_DATA: '../../highcharts-release/modules/data.js',
+					HIGHCHARTS_DRILLDOWN: '../../highcharts-release/modules/drilldown.js',
+					HIGHCHARTS_FUNNEL: '../../highcharts-release/modules/funnel.js',
+					HIGHCHARTS_HEATMAP: '../../highcharts-release/modules/heatmap.js',
+					HIGHCHARTS_TREEMAP: '../../highcharts-release/modules/treemap.js',
+					HIGHCHARTS_3D: '../../highcharts-release/highcharts-3d.js',
+					HIGHCHARTS_NODATA: '../../highcharts-release/modules/no-data-to-display.js',
 					// Uncomment below if you have both Highcharts and Highmaps license
 					// HIGHCHARTS_MAP: 'map.js',
-					HIGHCHARTS_SOLID_GAUGE: 'solid-gauge.js',
-					BROKEN_AXIS: 'broken-axis.js'
+					HIGHCHARTS_SOLID_GAUGE: '../../highcharts-release/modules/solid-gauge.js',
+					BROKEN_AXIS: '../../highcharts-release/modules/broken-axis.js'
 				},
 				highstock: {
-					JQUERY: 'jquery.1.9.1.min.js',
-					HIGHCHARTS: 'highstock.js',
-					HIGHCHARTS_MORE: 'highcharts-more.js',
-					HIGHCHARTS_DATA: 'data.js',
-					HIGHCHARTS_DRILLDOWN: 'drilldown.js',
-					HIGHCHARTS_FUNNEL: 'funnel.js',
-					HIGHCHARTS_HEATMAP: 'heatmap.js',
-					HIGHCHARTS_TREEMAP: 'treemap.js',
-					HIGHCHARTS_3D: 'highcharts-3d.js',
-					HIGHCHARTS_NODATA: 'no-data-to-display.js',
+					JQUERY: '../../jquery/dist/jquery.min.js',
+					HIGHCHARTS: '../../highstock-release/highstock.js',
+					HIGHCHARTS_MORE: '../../highstock-release/highcharts-more.js',
+					HIGHCHARTS_DATA: '../../highstock-release/modules/data.js',
+					HIGHCHARTS_DRILLDOWN: '../../highstock-release/modules/drilldown.js',
+					HIGHCHARTS_FUNNEL: '../../highstock-release/modules/funnel.js',
+					HIGHCHARTS_HEATMAP: '../../highstock-release/modules/heatmap.js',
+					HIGHCHARTS_TREEMAP: '../../highstock-release/modules/treemap.js',
+					HIGHCHARTS_3D: '../../highstock-release/highcharts-3d.js',
+					HIGHCHARTS_NODATA: '../../highstock-release/modules/no-data-to-display.js',
 					// Uncomment below if you have both Highstock and Highmaps license
 					// HIGHCHARTS_MAP: 'map.js',
-					HIGHCHARTS_SOLID_GAUGE: 'solid-gauge.js',
-					BROKEN_AXIS: 'broken-axis.js'
+					HIGHCHARTS_SOLID_GAUGE: '../../highstock-release/modules/solid-gauge.js',
+					BROKEN_AXIS: '../../highcharts-release/modules/broken-axis.js'
 				},
 				highmaps: {
-					JQUERY: 'jquery.1.9.1.min.js',
-					HIGHCHARTS: 'highmaps.js',
-					HIGHCHARTS_DATA: 'data.js',
-					HIGHCHARTS_DRILLDOWN: 'drilldown.js',
-					HIGHCHARTS_HEATMAP: 'heatmap.js',
-					HIGHCHARTS_NODATA: 'no-data-to-display.js'
+					JQUERY: '../../jquery/dist/jquery.min.js',
+					HIGHCHARTS: '../../highmaps-release/highmaps.js',
+					HIGHCHARTS_DATA: '../../highmaps-release/modules/data.js',
+					HIGHCHARTS_DRILLDOWN: '../../highmaps-release/modules/drilldown.js',
+					HIGHCHARTS_HEATMAP: '../../highmaps-release/modules/heatmap.js',
+					HIGHCHARTS_NODATA: '../../highcharts-release/modules/no-data-to-display.js'
 				}
 			},
 			TIMEOUT: 5000 /* 5 seconds timout for loading images */
@@ -266,11 +266,11 @@
 		function loadImages(imgUrls) {
 			var i, img;
 			counter = imgUrls.length;
-			for (i = 0; i < imgUrls.length; i += 1) {                    
-				img = new Image();                    
+			for (i = 0; i < imgUrls.length; i += 1) {
+				img = new Image();
 				/* onload decrements the counter, also when error (perhaps 404), don't wait for this image to be loaded */
-				img.onload = img.onerror = decrementImgCounter;                    
-				/* force loading of images by setting the src attr.*/                    
+				img.onload = img.onerror = decrementImgCounter;
+				/* force loading of images by setting the src attr.*/
 				img.src = imgUrls[i];
 			}
 		}
@@ -348,8 +348,8 @@
 				bodyElem = document.createElement('body');
 				bodyElem.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
 				while (foreignObjectElem.firstChild) {
-    				bodyElem.appendChild(foreignObjectElem.firstChild.cloneNode(true));
-    				foreignObjectElem.removeChild(foreignObjectElem.firstChild);
+					bodyElem.appendChild(foreignObjectElem.firstChild.cloneNode(true));
+					foreignObjectElem.removeChild(foreignObjectElem.firstChild);
 				}
 				foreignObjectElem.appendChild(bodyElem);
 			}
@@ -374,7 +374,7 @@
 			
 			for (imgIndex = 0; imgIndex < imgs.length; imgIndex = imgIndex + 1) {
 				imgUrls.push(imgs[imgIndex].href.baseVal);
-			}           
+			}
 			
 			return {
 				html: document.body.innerHTML,
@@ -524,16 +524,16 @@
 			output = params.outfile;
 
 			if (output !== undefined) {
-                outType = output.split('.').pop();
-            }
-            if (params.type !== undefined){
-                outType = params.type;
+				outType = output.split('.').pop();
 			}
-            if (outType === undefined) {
-                outType = 'png';
-            } else if(outType == 'jpg') {
-                outType = 'jpeg';
-            }
+			if (params.type !== undefined){
+				outType = params.type;
+			}
+			if (outType === undefined) {
+				outType = 'png';
+			} else if(outType == 'jpg') {
+				outType = 'jpeg';
+			}
 
 			constr = pick(params.constr, 'Chart');
 			callback = params.callback;
