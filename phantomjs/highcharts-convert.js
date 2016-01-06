@@ -194,7 +194,7 @@
 			// See Highcharts issue #4648
 			page.evaluate(function (zoom) {
 				var foreignObjectElem = document.getElementsByTagName('foreignObject')[0],
-					bodyElem = foreignObjectElem && foreignObjectElem.getElementsByTagName('body')[0];				
+					bodyElem = foreignObjectElem && foreignObjectElem.getElementsByTagName('body')[0];
 				if (bodyElem) {
 					bodyElem.setAttribute('style', '-webkit-transform: scale(' + zoom + '); -webkit-transform-origin: 0 0 !important');
 				}
@@ -220,7 +220,7 @@
 				page.evaluate(function(zoom) {
 					document.getElementsByTagName('body')[0].style.zoom = zoom;
 				}, page.zoomFactor);
-				
+
 				page.paperSize = { width: clipwidth * dpiCorrection, height: clipheight * dpiCorrection};
 			}
 		};
@@ -524,10 +524,16 @@
 			output = params.outfile;
 
 			if (output !== undefined) {
-				outType = pick(output.split('.').pop(),'png');
-			} else {
-				outType = pick(params.type,'png');
+                outType = output.split('.').pop();
+            }
+            if (params.type !== undefined){
+                outType = params.type;
 			}
+            if (outType === undefined) {
+                outType = 'png';
+            } else if(outType == 'jpg') {
+                outType = 'jpeg';
+            }
 
 			constr = pick(params.constr, 'Chart');
 			callback = params.callback;
