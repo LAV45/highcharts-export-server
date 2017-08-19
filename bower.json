@@ -1,0 +1,19 @@
+{
+    "name": "highcharts-exporting-server",
+    "description": "JavaScript charting framework",
+    "directory": "vendor",
+    "keywords": [
+        "charts",
+        "graphs"
+    ],
+    "main": "phantomjs/highcharts-convert.js",
+    "ignore": [
+        ".gitignore"
+    ],
+    "dependencies": {
+        "jquery": ">= 1.9.1",
+        "highcharts-release": "4.2.x",
+        "highstock-release": "4.2.x",
+        "highmaps-release": "4.2.x"
+    }
+}

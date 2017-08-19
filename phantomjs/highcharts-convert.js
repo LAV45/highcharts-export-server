@@ -25,44 +25,44 @@
 
 			files: {
 				highcharts: {
-					JQUERY: '../../jquery/dist/jquery.min.js',
-					HIGHCHARTS: '../../highcharts-release/highcharts.js',
-					HIGHCHARTS_MORE: '../../highcharts-release/highcharts-more.js',
-					HIGHCHARTS_DATA: '../../highcharts-release/modules/data.js',
-					HIGHCHARTS_DRILLDOWN: '../../highcharts-release/modules/drilldown.js',
-					HIGHCHARTS_FUNNEL: '../../highcharts-release/modules/funnel.js',
-					HIGHCHARTS_HEATMAP: '../../highcharts-release/modules/heatmap.js',
-					HIGHCHARTS_TREEMAP: '../../highcharts-release/modules/treemap.js',
-					HIGHCHARTS_3D: '../../highcharts-release/highcharts-3d.js',
-					HIGHCHARTS_NODATA: '../../highcharts-release/modules/no-data-to-display.js',
+					JQUERY: 'vendor/jquery/dist/jquery.min.js',
+					HIGHCHARTS: 'vendor/highcharts-release/highcharts.js',
+					HIGHCHARTS_MORE: 'vendor/highcharts-release/highcharts-more.js',
+					HIGHCHARTS_DATA: 'vendor/highcharts-release/modules/data.js',
+					HIGHCHARTS_DRILLDOWN: 'vendor/highcharts-release/modules/drilldown.js',
+					HIGHCHARTS_FUNNEL: 'vendor/highcharts-release/modules/funnel.js',
+					HIGHCHARTS_HEATMAP: 'vendor/highcharts-release/modules/heatmap.js',
+					HIGHCHARTS_TREEMAP: 'vendor/highcharts-release/modules/treemap.js',
+					HIGHCHARTS_3D: 'vendor/highcharts-release/highcharts-3d.js',
+					HIGHCHARTS_NODATA: 'vendor/highcharts-release/modules/no-data-to-display.js',
 					// Uncomment below if you have both Highcharts and Highmaps license
 					// HIGHCHARTS_MAP: 'map.js',
-					HIGHCHARTS_SOLID_GAUGE: '../../highcharts-release/modules/solid-gauge.js',
-					BROKEN_AXIS: '../../highcharts-release/modules/broken-axis.js'
+					HIGHCHARTS_SOLID_GAUGE: 'vendor/highcharts-release/modules/solid-gauge.js',
+					BROKEN_AXIS: 'vendor/highcharts-release/modules/broken-axis.js'
 				},
 				highstock: {
-					JQUERY: '../../jquery/dist/jquery.min.js',
-					HIGHCHARTS: '../../highstock-release/highstock.js',
-					HIGHCHARTS_MORE: '../../highstock-release/highcharts-more.js',
-					HIGHCHARTS_DATA: '../../highstock-release/modules/data.js',
-					HIGHCHARTS_DRILLDOWN: '../../highstock-release/modules/drilldown.js',
-					HIGHCHARTS_FUNNEL: '../../highstock-release/modules/funnel.js',
-					HIGHCHARTS_HEATMAP: '../../highstock-release/modules/heatmap.js',
-					HIGHCHARTS_TREEMAP: '../../highstock-release/modules/treemap.js',
-					HIGHCHARTS_3D: '../../highstock-release/highcharts-3d.js',
-					HIGHCHARTS_NODATA: '../../highstock-release/modules/no-data-to-display.js',
+					JQUERY: 'vendor/jquery/dist/jquery.min.js',
+					HIGHCHARTS: 'vendor/highstock-release/highstock.js',
+					HIGHCHARTS_MORE: 'vendor/highstock-release/highcharts-more.js',
+					HIGHCHARTS_DATA: 'vendor/highstock-release/modules/data.js',
+					HIGHCHARTS_DRILLDOWN: 'vendor/highstock-release/modules/drilldown.js',
+					HIGHCHARTS_FUNNEL: 'vendor/highstock-release/modules/funnel.js',
+					HIGHCHARTS_HEATMAP: 'vendor/highstock-release/modules/heatmap.js',
+					HIGHCHARTS_TREEMAP: 'vendor/highstock-release/modules/treemap.js',
+					HIGHCHARTS_3D: 'vendor/highstock-release/highcharts-3d.js',
+					HIGHCHARTS_NODATA: 'vendor/highstock-release/modules/no-data-to-display.js',
 					// Uncomment below if you have both Highstock and Highmaps license
 					// HIGHCHARTS_MAP: 'map.js',
-					HIGHCHARTS_SOLID_GAUGE: '../../highstock-release/modules/solid-gauge.js',
-					BROKEN_AXIS: '../../highcharts-release/modules/broken-axis.js'
+					HIGHCHARTS_SOLID_GAUGE: 'vendor/highstock-release/modules/solid-gauge.js',
+					BROKEN_AXIS: 'vendor/highcharts-release/modules/broken-axis.js'
 				},
 				highmaps: {
-					JQUERY: '../../jquery/dist/jquery.min.js',
-					HIGHCHARTS: '../../highmaps-release/highmaps.js',
-					HIGHCHARTS_DATA: '../../highmaps-release/modules/data.js',
-					HIGHCHARTS_DRILLDOWN: '../../highmaps-release/modules/drilldown.js',
-					HIGHCHARTS_HEATMAP: '../../highmaps-release/modules/heatmap.js',
-					HIGHCHARTS_NODATA: '../../highcharts-release/modules/no-data-to-display.js'
+					JQUERY: 'vendor/jquery/dist/jquery.min.js',
+					HIGHCHARTS: 'vendor/highmaps-release/highmaps.js',
+					HIGHCHARTS_DATA: 'vendor/highmaps-release/modules/data.js',
+					HIGHCHARTS_DRILLDOWN: 'vendor/highmaps-release/modules/drilldown.js',
+					HIGHCHARTS_HEATMAP: 'vendor/highmaps-release/modules/heatmap.js',
+					HIGHCHARTS_NODATA: 'vendor/highcharts-release/modules/no-data-to-display.js'
 				}
 			},
 			TIMEOUT: 5000 /* 5 seconds timout for loading images */
@@ -531,7 +531,7 @@
 			}
 			if (outType === undefined) {
 				outType = 'png';
-			} else if(outType == 'jpg') {
+			} else if(outType === 'jpg') {
 				outType = 'jpeg';
 			}
 
